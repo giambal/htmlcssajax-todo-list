@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- JS: HANDLEBARS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js" charset="utf-8"></script>
+    <script id="card-template" type="text/x-handlebars-template">
+      <div class="card">
+        <div class="idx">
+          <span class="data-id">{{id}}</span>
+          <span class="del">X</span>
+        </div>
+        <div class="card-content">
+          {{testo}}
+        </div>
+      </div>
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <!-- JS: MY SCRIPT -->
+    <script src="script.js" charset="utf-8"></script>
+    <!-- moment -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- ajax -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+  <div class="main-container">
+    <header>
+      <h1><b>TO DO LIST</b></h1>
+    </header>
+
+    <div class="body-container">
+      <div class="usr-comands">
+        <input id="usr-input" type="text" name="" value="">
+        <button id="btn-load" type="button" name="button">load card</button>
+      </div>
+      <div class="cards-container">
+
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
