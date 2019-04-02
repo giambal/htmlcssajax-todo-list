@@ -83,31 +83,30 @@ function deleteCard() {
 
 function createCard() {
 
+  var dataInput={
+
+    text:$("#usr-input").val()
+
+  };
+
   $.ajax({
 
     url: "http://157.230.17.132:3002/todos/",
     method:"POST",
+    data: dataInput,
     success: function (inData,state) {
 
 
-      var input=$("#usr-input");
-
       var tempData={
 
-        id:inData.id+1,
-        testo:input.val()
+        id:inData.id,
+        testo:inData.text
 
       };
 
-      var container=$(".cards-container");
-      var template=$("#card-template").html();
-      var compiled=Handlebars.compile(template);
-      var card=compiled(tempData);
-      container.append(card);
-
-
       loadCard();
     },
+
     error: function () {
 
     }
@@ -135,8 +134,8 @@ function clearTextECreate(e){
 
 function init() {
 
-  var btn=$("#btn-load");
-  btn.click(loadCard);
+  loadCard();
+
 
   $(document).on("click" , ".del" , deleteCard);
 
